@@ -101,7 +101,7 @@ public class Maze {
     }
     
     //disegna finche non trova il formaggio
-    public boolean run(){
+    public boolean run() throws InterruptedException{
         if (rat.currentPos == fromage) return true;       
         
         rat.currentPos.content = CELL_CONTENT.TRACCIA;
@@ -121,7 +121,7 @@ public class Maze {
     }   
     
     //Disegna il labirinto riga per riga
-    private void draw(){
+    private void draw() throws InterruptedException{
         Display.clear();
         for (MazeCell[] row : map) 
         {

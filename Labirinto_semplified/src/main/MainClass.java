@@ -4,7 +4,7 @@ import maze_Logic.*;
 
 public class MainClass {
 
-    public static void main(String[] args) {    
+    public static void main(String[] args) throws InterruptedException {    
         int length;
         while(true){
             Display.writeLine("inserire la lunghezza laterale del labirinto\n");

@@ -38,14 +38,15 @@ public final class Display {
         return s.nextLine();
     }
     
-    public static boolean clear(){
-        try{
+    public static boolean clear() throws InterruptedException {
+        try{            
             Robot r = new Robot();
             
             r.keyPress(KeyEvent.VK_CONTROL);
             r.keyPress(KeyEvent.VK_L);
             r.keyRelease(KeyEvent.VK_L);
             r.keyRelease(KeyEvent.VK_CONTROL);
+            Thread.sleep(5);//serve per non incasinare
             return true;
         }   
         catch(AWTException e){
